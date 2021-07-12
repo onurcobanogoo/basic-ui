@@ -9,7 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.27.4",
     "gulp": "^4.0.2",
