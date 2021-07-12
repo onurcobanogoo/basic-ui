@@ -1,11 +1,11 @@
 .deca-radio{
+  position: relative;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  position: relative;
 
   &__input {
     display: none;
+    cursor: pointer;
   }
 
   &__label {
@@ -14,6 +14,8 @@
     font-weight: $deca-font-weight-normal;
     color: $color-main-text-gray;
     padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
   }
 
   &__button {
@@ -53,10 +55,16 @@
 
   &__input:disabled ~ &__label &__button{
     border-color:$color-main-disable;
+    cursor: initial;
   }
 
   &__input:disabled ~ &__label &__button::after {
     background-color:$color-main-disable;
+    cursor: initial;
+  }
+
+  &__input:disabled + &__label {
+    cursor: initial;
   }
 
   &:hover {

@@ -5567,13 +5567,13 @@ body {
 }
 
 .deca-radio {
+  position: relative;
   display: flex;
   align-items: center;
-  cursor: pointer;
-  position: relative;
 }
 .deca-radio__input {
   display: none;
+  cursor: pointer;
 }
 .deca-radio__label {
   font-size: 16px;
@@ -5581,6 +5581,11 @@ body {
   font-weight: 400;
   color: #96999C;
   padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .deca-radio__button {
   height: 20px;
@@ -5615,9 +5620,14 @@ body {
 }
 .deca-radio__input:disabled ~ .deca-radio__label .deca-radio__button {
   border-color: #C8CBCD;
+  cursor: initial;
 }
 .deca-radio__input:disabled ~ .deca-radio__label .deca-radio__button::after {
   background-color: #C8CBCD;
+  cursor: initial;
+}
+.deca-radio__input:disabled + .deca-radio__label {
+  cursor: initial;
 }
 .deca-radio:hover .deca-radio__input:checked ~ .deca-radio__label .deca-radio__button::after {
   background-color: #A5B7FE;
@@ -5670,6 +5680,7 @@ body {
 }
 .deca-toggle__input:disabled + .deca-toggle__slider {
   background-color: #EAEDEE;
+  cursor: initial;
 }
 .deca-toggle__input:checked:disabled + .deca-toggle__slider {
   background-color: #C8CBCD;
@@ -5679,6 +5690,62 @@ body {
 }
 .deca-toggle__input:disabled:checked:hover + .deca-toggle__slider {
   background-color: #C8CBCD;
+}
+
+.deca-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.deca-checkbox__input {
+  visibility: hidden;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.deca-checkbox__label {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #96999C;
+  padding-left: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.deca-checkbox__input[type=checkbox]:after {
+  visibility: visible;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #C8CBCD;
+  border-radius: 4px;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.15s ease-in-out;
+}
+.deca-checkbox__input[type=checkbox]:checked:after {
+  background-color: #1F41F7;
+  border-color: #1F41F7;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS41MDI1NiAwLjgzODk0NUM5LjMwMjA5IDAuNjI4MzcgOC45ODc0OSAwLjYxMDgyMiA4Ljc2Nzk5IDAuNzg2MzAxTDguNzEwNjQgMC44Mzg5NDVMMy44Nzk5MiA1LjkxMzE4TDEuMjg5MjMgMy4xOTE5MkMxLjA3MDU0IDIuOTYyMTkgMC43MTU5NjIgMi45NjIxOSAwLjQ5NzI3MSAzLjE5MTkyQzAuMjk2ODAzIDMuNDAyNSAwLjI4MDA5OCAzLjczMjk2IDAuNDQ3MTU0IDMuOTYzNTJMMC40OTcyNzEgNC4wMjM3NkwzLjQ4Mzk0IDcuMTYxMDNDMy42ODQ0NCA3LjM3MTYxIDMuOTk5MDQgNy4zODkxNiA0LjIxODU0IDcuMjEzNjdMNC4yNzU4OCA3LjE2MTAzTDkuNTAyNTYgMS42NzA4NEM5LjcyMTI2IDEuNDQxMTIgOS43MjEyNiAxLjA2ODY2IDkuNTAyNTYgMC44Mzg5NDVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+}
+.deca-checkbox__input[type=checkbox]:not(:disabled):checked:hover:after {
+  border-color: #A5B7FE;
+  background-color: #A5B7FE;
+}
+.deca-checkbox__input[type=checkbox]:disabled:after {
+  border-color: #C8CBCD;
+  background-color: #C8CBCD;
+}
+.deca-checkbox__input[type=checkbox]:disabled + .deca-checkbox__label {
+  cursor: initial;
 }
 
 .style-guide__header {

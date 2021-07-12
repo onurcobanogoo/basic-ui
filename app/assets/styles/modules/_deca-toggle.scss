@@ -49,6 +49,7 @@
 
   &__input:disabled + &__slider {
     background-color: #EAEDEE;
+    cursor: initial;
   }
 
   &__input:checked:disabled + &__slider {

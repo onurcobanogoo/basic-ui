@@ -1,0 +1,59 @@
+.deca-checkbox{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    visibility: hidden;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: $deca-font-weight-normal;
+    color: $color-main-text-gray;
+    padding-left: 10px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__input[type="checkbox"]:after {
+    visibility: visible;
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom:0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid  $color-main-disable;
+    border-radius: 4px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .15s ease-in-out;
+  }
+
+  &__input[type="checkbox"]:checked:after {
+    background-color: $color-primary-500;
+    border-color: $color-primary-500;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS41MDI1NiAwLjgzODk0NUM5LjMwMjA5IDAuNjI4MzcgOC45ODc0OSAwLjYxMDgyMiA4Ljc2Nzk5IDAuNzg2MzAxTDguNzEwNjQgMC44Mzg5NDVMMy44Nzk5MiA1LjkxMzE4TDEuMjg5MjMgMy4xOTE5MkMxLjA3MDU0IDIuOTYyMTkgMC43MTU5NjIgMi45NjIxOSAwLjQ5NzI3MSAzLjE5MTkyQzAuMjk2ODAzIDMuNDAyNSAwLjI4MDA5OCAzLjczMjk2IDAuNDQ3MTU0IDMuOTYzNTJMMC40OTcyNzEgNC4wMjM3NkwzLjQ4Mzk0IDcuMTYxMDNDMy42ODQ0NCA3LjM3MTYxIDMuOTk5MDQgNy4zODkxNiA0LjIxODU0IDcuMjEzNjdMNC4yNzU4OCA3LjE2MTAzTDkuNTAyNTYgMS42NzA4NEM5LjcyMTI2IDEuNDQxMTIgOS43MjEyNiAxLjA2ODY2IDkuNTAyNTYgMC44Mzg5NDVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K');
+  }
+
+  &__input[type="checkbox"]:not(:disabled):checked:hover:after {
+    border-color: $color-primary-200;
+    background-color: $color-primary-200;
+  }
+
+  &__input[type="checkbox"]:disabled:after {
+    border-color: $color-main-disable;
+    background-color: $color-main-disable;
+  }
+
+  &__input[type="checkbox"]:disabled + &__label {
+    cursor: initial;
+  }
+}
