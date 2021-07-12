@@ -5443,8 +5443,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -5485,6 +5483,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  color: #10182B;
 }
 
 .deca-btn {
@@ -5529,38 +5528,123 @@ body {
 }
 .deca-btn--primary {
   background-color: #1F41F7;
-  color: #FFF;
+  color: #FFFFFF;
 }
 .deca-btn--primary:hover, .deca-btn--primary:focus {
   background-color: #506bf9;
 }
 .deca-btn--success {
   background-color: #6BE42B;
-  color: #FFF;
+  color: #FFFFFF;
 }
 .deca-btn--success:hover, .deca-btn--success:focus {
   background-color: #8bea58;
 }
 .deca-btn--info {
   background-color: #5FA9FF;
-  color: #000;
+  color: #10182B;
 }
 .deca-btn--info:hover, .deca-btn--info:focus {
   background-color: #92c4ff;
 }
 .deca-btn--warning {
   background-color: #FFAB36;
-  color: #000;
+  color: #10182B;
 }
 .deca-btn--warning:hover, .deca-btn--warning:focus {
   background-color: #ffc069;
 }
 .deca-btn--danger {
   background-color: #FB3030;
-  color: #FFF;
+  color: #FFFFFF;
 }
 .deca-btn--danger:hover, .deca-btn--danger:focus {
   background-color: #fc6262;
+}
+.deca-btn:disabled {
+  background-color: #ececec;
+  color: #10182B;
+}
+
+.deca-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.deca-radio__input {
+  display: none;
+}
+.deca-radio__label {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #96999C;
+  padding-left: 30px;
+}
+.deca-radio__button {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #5672FA;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  transition: all 0.15s ease-in-out;
+}
+.deca-radio__button::after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1F41F7;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+.deca-radio__input:checked ~ .deca-radio__label .deca-radio__button::after {
+  opacity: 1 !important;
+}
+.deca-radio__input:checked ~ .deca-radio__label .deca-radio__button {
+  border-color: #1F41F7;
+}
+.deca-radio__input:disabled ~ .deca-radio__label .deca-radio__button {
+  border-color: #C8CBCD;
+}
+.deca-radio__input:disabled ~ .deca-radio__label .deca-radio__button::after {
+  background-color: #C8CBCD;
+}
+.deca-radio:hover .deca-radio__input:checked ~ .deca-radio__label .deca-radio__button::after {
+  background-color: #A5B7FE;
+}
+.deca-radio:hover .deca-radio__button {
+  border-color: #A5B7FE;
+}
+
+.style-guide__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+.style-guide__content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.style-guide__section {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.style-guide__section-title {
+  margin-bottom: 20px;
 }
 
 @font-face {

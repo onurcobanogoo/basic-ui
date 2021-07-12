@@ -1,0 +1,25 @@
+.style-guide{
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  &__section{
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__section-title{
+    margin-bottom: 20px;
+  }
+}

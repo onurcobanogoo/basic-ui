@@ -58,10 +58,10 @@
 
   @function set-color($color) {
     @if (lightness($color) > 60) {
-      @return #000;
+      @return $color-main-text;
     }
     @else {
-      @return #FFF;
+      @return $color-main-white;
     }
   }
 
@@ -75,5 +75,9 @@
     }
   }
 
+  &:disabled{
+    background-color: #ececec;
+    color: $color-main-text;
+  }
 }
 

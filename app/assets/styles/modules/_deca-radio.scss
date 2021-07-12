@@ -1,0 +1,70 @@
+.deca-radio{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: $deca-font-weight-normal;
+    color: $color-main-text-gray;
+    padding-left: 30px;
+  }
+
+  &__button {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #5672FA;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom:3px;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__button::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary-500;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__input:checked ~ &__label &__button::after {
+    opacity: 1 !important;
+  }
+
+  &__input:checked ~ &__label &__button{
+    border-color:$color-primary-500;
+  }
+
+  &__input:disabled ~ &__label &__button{
+    border-color:$color-main-disable;
+  }
+
+  &__input:disabled ~ &__label &__button::after {
+    background-color:$color-main-disable;
+  }
+
+  &:hover {
+    .deca-radio__input:checked ~ .deca-radio__label .deca-radio__button::after {
+      background-color: $color-primary-200;
+    }
+    .deca-radio__button{
+      border-color: $color-primary-200;
+    }
+  }
+}
