@@ -1,0 +1,65 @@
+.deca-toggle{
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 30px;
+
+  &__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D2DCFE;
+    transition: .15s;
+    border-radius: 34px;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 2px;
+      bottom: 2px;
+      background-color: $color-main-white;
+      transition: .15s;
+      border-radius: 50%;
+    }
+  }
+
+  &__input:checked + &__slider {
+    background-color: $color-primary-500;
+  }
+
+  &__input:not(:checked):hover + &__slider {
+    background-color: #A5B7FE;
+  }
+
+  &__input:checked + &__slider:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+  }
+
+  &__input:disabled + &__slider {
+    background-color: #EAEDEE;
+  }
+
+  &__input:checked:disabled + &__slider {
+    background-color: $color-main-disable;
+  }
+
+  &__input:disabled:hover + &__slider{
+    background-color: #EAEDEE;
+  }
+
+  &__input:disabled:checked:hover + &__slider{
+    background-color: $color-main-disable;
+  }
+}

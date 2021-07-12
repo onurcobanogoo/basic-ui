@@ -5610,7 +5610,7 @@ body {
 .deca-radio__input:checked ~ .deca-radio__label .deca-radio__button::after {
   opacity: 1 !important;
 }
-.deca-radio__input:checked ~ .deca-radio__label .deca-radio__button {
+.deca-radio__input:checked ~ .deca-radio__button {
   border-color: #1F41F7;
 }
 .deca-radio__input:disabled ~ .deca-radio__label .deca-radio__button {
@@ -5624,6 +5624,61 @@ body {
 }
 .deca-radio:hover .deca-radio__button {
   border-color: #A5B7FE;
+}
+
+.deca-toggle {
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 30px;
+}
+.deca-toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.deca-toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #D2DCFE;
+  transition: 0.15s;
+  border-radius: 34px;
+}
+.deca-toggle__slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #FFFFFF;
+  transition: 0.15s;
+  border-radius: 50%;
+}
+.deca-toggle__input:checked + .deca-toggle__slider {
+  background-color: #1F41F7;
+}
+.deca-toggle__input:not(:checked):hover + .deca-toggle__slider {
+  background-color: #A5B7FE;
+}
+.deca-toggle__input:checked + .deca-toggle__slider:before {
+  transform: translateX(21px);
+}
+.deca-toggle__input:disabled + .deca-toggle__slider {
+  background-color: #EAEDEE;
+}
+.deca-toggle__input:checked:disabled + .deca-toggle__slider {
+  background-color: #C8CBCD;
+}
+.deca-toggle__input:disabled:hover + .deca-toggle__slider {
+  background-color: #EAEDEE;
+}
+.deca-toggle__input:disabled:checked:hover + .deca-toggle__slider {
+  background-color: #C8CBCD;
 }
 
 .style-guide__header {

@@ -47,7 +47,7 @@
     opacity: 1 !important;
   }
 
-  &__input:checked ~ &__label &__button{
+  &__input:checked ~ &__button{
     border-color:$color-primary-500;
   }
 
