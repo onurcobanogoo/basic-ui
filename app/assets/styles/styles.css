@@ -7072,6 +7072,9 @@ body {
   content: "";
 }
 
+.deca-dropdown {
+  margin-bottom: 16px;
+}
 .deca-dropdown .dropdown-toggle {
   border: 2px solid;
   border-color: #EAEDEE !important;
@@ -7190,6 +7193,59 @@ body {
 }
 .show > .btn-light.dropdown-toggle:after {
   transform: rotate(180deg);
+}
+
+.deca-notification {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.deca-notification__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+}
+.deca-notification__description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 4px;
+}
+.deca-notification__close {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.deca-notification--success {
+  background-color: #EDFDD4;
+  color: #6BE42B;
+}
+.deca-notification--info {
+  background-color: #DFF3FF;
+  color: #5FA9FF;
+}
+.deca-notification--warning {
+  background-color: #FFF5D6;
+  color: #FFAB36;
+}
+.deca-notification--danger {
+  background-color: #FEE3D5;
+  color: #FB3030;
+}
+.deca-notification--has-icon {
+  padding-left: 62px;
+}
+.deca-notification--has-icon .deca-notification__icon {
+  position: absolute;
+  left: 30px;
+  top: 18px;
+  font-size: 24px;
 }
 
 .style-guide__header {

@@ -18,7 +18,7 @@
     color: $color-primary-500;
   }
 
-  //Button Colors
+  //Form types: name, icon and color
   $form-types: ("success" $deca-icon-check $color-success-500, "info" $deca-icon-info-triangle $color-info-500, "warning" $deca-icon-cross $color-warning-500, "danger" $deca-icon-cross $color-danger-500 );
 
   @each $name, $icon, $color in $form-types {
