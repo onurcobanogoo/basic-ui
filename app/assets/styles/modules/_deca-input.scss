@@ -7,6 +7,7 @@
   color: $color-main-text-gray;
   border: 2px solid #EAEDEE;
   transition: all .15s ease-in-out;
+
   &:focus{
     outline: none;
     border-color: $color-primary-500;

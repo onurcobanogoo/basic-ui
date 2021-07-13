@@ -7017,6 +7017,9 @@ body {
   position: relative;
   margin-bottom: 16px;
 }
+.deca-form-group__icon {
+  font-style: normal;
+}
 .deca-form-group__icon:before {
   font-family: "icomoon";
   font-size: 24px;
