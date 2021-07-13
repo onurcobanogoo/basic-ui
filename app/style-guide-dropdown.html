@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/styles/styles.css">
+        <title>Dropdown - Style Guide</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="style-guide">
+                <div class="style-guide__header">
+                    <h2>Dropdowns</h2>
+                </div>
+                <div class="style-guide__content">
+                    <div class="style-guide__section">
+                        <h5 class="style-guide__section-title">Dropdown</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Deca dropdown basic -->
+                                <select class="deca-dropdown selectpicker" data-width="100%" title="Choose one of the following...">
+                                    <option>Item One</option>
+                                    <option>Item Two</option>
+                                    <option>Item Three</option>
+                                </select>
+                                <!-- end Deca dropdown basic -->
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Deca dropdown multiselect with button -->
+                                <select class="deca-dropdown deca-dropdown--multiselect selectpicker"
+                                        multiple data-actions-box="true" data-width="100%"
+                                        title="Choose one of the following...">
+                                    <option>Item One</option>
+                                    <option>Item Two</option>
+                                    <option>Item Three</option>
+                                </select>
+                                <!-- end Deca dropdown multiselect with button -->
+                            </div>
+
+                            <div class="col-md-4">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap-select/js/bootstrap-select.js"></script>
+    <script>
+        $('.selectpicker').selectpicker();
+    </script>
+</html>
