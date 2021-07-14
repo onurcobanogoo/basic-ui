@@ -48,7 +48,7 @@
   }
 
   &__input:disabled + &__slider {
-    background-color: #EAEDEE;
+    background-color: $color-black-200;
     cursor: initial;
   }
 
@@ -57,7 +57,7 @@
   }
 
   &__input:disabled:hover + &__slider{
-    background-color: #EAEDEE;
+    background-color: $color-black-200;
   }
 
   &__input:disabled:checked:hover + &__slider{

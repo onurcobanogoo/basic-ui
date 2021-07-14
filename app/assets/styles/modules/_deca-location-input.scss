@@ -1,0 +1,12 @@
+.deca-location-input{
+  position: relative;
+  color: $color-main-text-gray;
+  &__icon{
+    font-size:24px;
+    position:absolute;
+    top: 14px;
+    right: 20px;
+    background-color: $color-main-white;
+    padding: 2px 0;
+  }
+}

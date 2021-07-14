@@ -6775,6 +6775,16 @@ body {
 .deca-btn--icon-left i {
   margin-right: 8px;
 }
+.deca-btn--basic {
+  background-color: transparent;
+  color: #96999C;
+}
+.deca-btn--basic i {
+  font-size: 24px;
+}
+.deca-btn--basic:hover, .deca-btn--basic:focus {
+  color: #7c8083;
+}
 .deca-btn--primary {
   background-color: #1F41F7;
   color: #FFFFFF;
@@ -7007,6 +7017,7 @@ body {
   color: #96999C;
   border: 2px solid #EAEDEE;
   transition: all 0.15s ease-in-out;
+  background-color: #FFFFFF;
 }
 .deca-form-input:focus {
   outline: none;
@@ -7251,6 +7262,209 @@ body {
   font-size: 24px;
 }
 
+.deca-notification-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 2px solid #EAEDEE;
+  border-radius: 12px;
+  color: #96999C;
+  background-color: #FFFFFF;
+}
+.deca-notification-card__left, .deca-notification-card__right {
+  display: flex;
+  align-items: center;
+}
+.deca-notification-card__left i, .deca-notification-card__right i {
+  font-size: 24px;
+}
+.deca-notification-card__left i {
+  margin-right: 10px;
+}
+.deca-notification-card__right span {
+  font-size: 14px;
+  line-height: 21px;
+}
+.deca-notification-card__right i {
+  margin-left: 2px;
+}
+
+.deca-location-input {
+  position: relative;
+  color: #96999C;
+}
+.deca-location-input__icon {
+  font-size: 24px;
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  background-color: #FFFFFF;
+  padding: 2px 0;
+}
+
+.deca-create-group-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border: 2px solid #EAEDEE;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+}
+.deca-create-group-card__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.deca-create-group-card__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #96999C;
+}
+.deca-create-group-card__button {
+  background-color: transparent;
+  border: none;
+}
+.deca-create-group-card__button i {
+  font-size: 24px;
+  color: #96999C;
+}
+
+.deca-user-action-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 16px;
+  border: 2px solid #EAEDEE;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.deca-user-action-card__info {
+  display: flex;
+  align-items: center;
+}
+.deca-user-action-card__info img {
+  margin-right: 12px;
+}
+.deca-user-action-card__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+.deca-user-action-card__subtitle {
+  font-size: 14px;
+  line-height: 21px;
+  color: #96999C;
+}
+.deca-user-action-card__music {
+  display: flex;
+  flex-direction: column;
+  /* webkit */
+}
+.deca-user-action-card__music span {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.deca-user-action-card__music progress {
+  display: inline-block;
+  border: 0 none;
+  background: #F4F6F6;
+  border-radius: 2px;
+}
+.deca-user-action-card__music progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: #5672FA;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .deca-user-action-card__music progress {
+    height: 4px;
+  }
+}
+.deca-user-action-card__music progress::-webkit-progress-bar {
+  background: transparent;
+}
+.deca-user-action-card__music progress::-webkit-progress-value {
+  border-radius: 2px;
+  background: #5672FA;
+}
+.deca-user-action-card__social a {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  color: #1F41F7;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.deca-user-action-card__social a i {
+  font-size: 24px;
+}
+.deca-user-action-card__social a:hover, .deca-user-action-card__social a:focus {
+  outline: none;
+  color: #506bf9;
+}
+.deca-user-action-card--big-image {
+  padding: 10px 16px;
+}
+.deca-user-action-card--big-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+.deca-user-action-card--medium-image {
+  padding: 14px 16px;
+}
+.deca-user-action-card--medium-image img {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+.deca-user-action-card--small-image {
+  padding: 15px 16px;
+}
+.deca-user-action-card--small-image img {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+}
+
+/*
+
+&__info{
+  display: flex;
+  align-items: center;
+  img{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin-right: 12px;
+  }
+  span{
+    font-weight: $deca-font-weight-medium;
+  }
+}
+&__button{
+  background-color: transparent;
+  border: none;
+  i{
+    font-size: 24px;
+    color: $color-main-text-gray;
+  }
+}*/
 .style-guide__header {
   display: flex;
   align-items: center;

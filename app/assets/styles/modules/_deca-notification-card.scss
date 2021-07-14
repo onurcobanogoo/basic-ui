@@ -1,0 +1,33 @@
+.deca-notification-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 2px solid $color-black-200;
+  border-radius: 12px;
+  color: $color-main-text-gray;
+  background-color: $color-main-white;
+
+  &__left, &__right{
+    display: flex;
+    align-items: center;
+    i{
+      font-size: 24px;
+    }
+  }
+
+  &__left{
+    i{
+      margin-right: 10px;
+    }
+  }
+  &__right{
+    span{
+      font-size: 14px;
+      line-height: 21px;
+    }
+    i{
+      margin-left: 2px;
+    }
+  }
+}

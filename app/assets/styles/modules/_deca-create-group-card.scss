@@ -1,0 +1,31 @@
+.deca-create-group-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border: 2px solid $color-black-200;
+  background-color: $color-main-white;
+  border-radius: 12px;
+  &__title{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  &__subtitle{
+    font-weight: $deca-font-weight-normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-main-text-gray;
+  }
+  &__button{
+    background-color: transparent;
+    border: none;
+    i{
+      font-size: 24px;
+      color: $color-main-text-gray;
+    }
+  }
+}

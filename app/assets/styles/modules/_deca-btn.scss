@@ -53,6 +53,17 @@
 
   &--icon{}
 
+  &--basic{
+    background-color: transparent;
+    color: $color-main-text-gray;
+    i{
+      font-size: 24px;
+    }
+    &:hover, &:focus{
+      color: darken($color-main-text-gray, 10%);
+    }
+  }
+
   //Button Colors
   $button-colors: (primary: $color-primary-500, success: $color-success-500, info:$color-info-500, warning:$color-warning-500, danger:$color-danger-500 );
 
