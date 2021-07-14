@@ -7385,6 +7385,7 @@ body {
   border: 0 none;
   background: #F4F6F6;
   border-radius: 2px;
+  width: 100%;
 }
 .deca-user-action-card__music progress::-moz-progress-bar {
   border-radius: 12px;
@@ -7442,29 +7443,96 @@ body {
   border-radius: 15px;
 }
 
-/*
-
-&__info{
+.deca-progress {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.deca-progress__info {
   display: flex;
   align-items: center;
-  img{
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    margin-right: 12px;
-  }
-  span{
-    font-weight: $deca-font-weight-medium;
+  justify-content: space-between;
+  margin-bottom: 1px;
+}
+.deca-progress__desc {
+  font-size: 14px;
+  line-height: 21px;
+}
+.deca-progress__icon {
+  color: #1F41F7;
+  font-size: 16px;
+}
+.deca-progress__time {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #96999C;
+}
+.deca-progress__bar {
+  display: inline-block;
+  border: 0 none;
+  background: #F4F6F6;
+  width: 100%;
+}
+.deca-progress__bar::-moz-progress-bar {
+  background: #1F41F7;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .deca-progress__bar {
+    height: 4px;
   }
 }
-&__button{
-  background-color: transparent;
-  border: none;
-  i{
-    font-size: 24px;
-    color: $color-main-text-gray;
+.deca-progress__bar::-webkit-progress-bar {
+  background: transparent;
+}
+.deca-progress__bar::-webkit-progress-value {
+  border-radius: 2px;
+  background: #1F41F7;
+}
+.deca-progress--big .deca-progress__bar {
+  border-radius: 4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .deca-progress--big .deca-progress__bar {
+    height: 8px;
   }
-}*/
+}
+.deca-progress--big .deca-progress__bar::-moz-progress-bar {
+  border-radius: 4px;
+}
+.deca-progress--big .deca-progress__bar::-webkit-progress-value {
+  border-radius: 4px;
+}
+.deca-progress--medium .deca-progress__bar {
+  border-radius: 3px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .deca-progress--medium .deca-progress__bar {
+    height: 6px;
+  }
+}
+.deca-progress--medium .deca-progress__bar::-moz-progress-bar {
+  border-radius: 3px;
+}
+.deca-progress--medium .deca-progress__bar::-webkit-progress-value {
+  border-radius: 3px;
+}
+.deca-progress--small .deca-progress__bar {
+  border-radius: 2px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .deca-progress--small .deca-progress__bar {
+    height: 4px;
+  }
+}
+.deca-progress--small .deca-progress__bar::-moz-progress-bar {
+  border-radius: 2px;
+}
+.deca-progress--small .deca-progress__bar::-webkit-progress-value {
+  border-radius: 2px;
+}
+
 .style-guide__header {
   display: flex;
   align-items: center;

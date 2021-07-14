@@ -1,0 +1,74 @@
+.deca-progress{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1px;
+  }
+
+  &__desc{
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__icon{
+    color: $color-primary-500;
+    font-size: 16px;
+  }
+
+  &__time{
+    font-weight: $deca-font-weight-medium;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-main-text-gray;
+  }
+
+  &__bar{
+    display:inline-block ;
+    border: 0 none;
+    background: #F4F6F6;
+    width: 100%;
+
+    &::-moz-progress-bar {
+      background: $color-primary-500;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      height: 4px;
+    }
+
+    &::-webkit-progress-bar {
+      background: transparent;
+    }
+
+    &::-webkit-progress-value {
+      border-radius: 2px;
+      background: $color-primary-500;
+    }
+  }
+
+  //progress sizes
+  $progress-sizes : (big: 8px, medium: 6px, small: 4px);
+
+  @each $name, $size in $progress-sizes {
+    &--#{$name} {
+      .deca-progress__bar{
+        border-radius:$size/2;
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+          height: $size;
+        }
+      }
+      .deca-progress__bar::-moz-progress-bar {
+        border-radius: $size/2;
+      }
+      .deca-progress__bar::-webkit-progress-value {
+        border-radius:$size/2;
+      }
+    }
+  }
+}
