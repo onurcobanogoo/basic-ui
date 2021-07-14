@@ -1,7 +1,8 @@
 .deca-btn {
   font-family: $primary-font;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: $deca-font-weight-medium;
   border: none;
   border-radius: 12px;
@@ -41,6 +42,7 @@
 
   //Button types
   &--icon-right {
+    justify-content: space-between;
   }
 
   &--icon-right &__icon {
@@ -48,6 +50,7 @@
   }
 
   &--icon-left {
+    justify-content: space-between;
   }
 
   &--icon-left &__icon {
