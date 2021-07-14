@@ -1,4 +1,4 @@
-.deca-user-action-card{
+.deca-user-action-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,110 +8,103 @@
   background-color: $color-main-white;
   margin-bottom: 16px;
 
-  &__info{
+  &__info {
     display: flex;
     align-items: center;
-    img{
-      margin-right: 12px;
-    }
   }
 
-  &__title{
+  &__info &__user-image {
+    margin-right: 12px;
+  }
+
+  &__title {
     font-weight: $deca-font-weight-medium;
     font-size: 16px;
     line-height: 18px;
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 14px;
     line-height: 21px;
     color: $color-main-text-gray;
   }
 
-  &__music{
+  &__music {
     display: flex;
     flex-direction: column;
-    span{
-      display: inline-block;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 18px;
-      margin-bottom: 7px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 1; /* number of lines to show */
-      -webkit-box-orient: vertical;
-    }
-    progress {
-      display:inline-block ;
-      border: 0 none;
-      background: #F4F6F6;
-      border-radius: 2px;
-      width: 100%;
-    }
+
     progress::-moz-progress-bar {
-      border-radius: 12px;
       background: #5672FA;
     }
-    /* webkit */
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-      progress {
-        height: 4px;
-      }
-    }
-    progress::-webkit-progress-bar {
-      background: transparent;
-    }
+
     progress::-webkit-progress-value {
-      border-radius: 2px;
       background: #5672FA;
     }
   }
 
-  &__social{
-    a{
-      display: inline-block;
-      background-color: transparent;
-      border: none;
-      color: $color-primary-500;
-      text-decoration: none;
-      margin-left: 10px;
-      i{
-        font-size: 24px;
-      }
-      &:hover, &:focus{
-        outline: none;
-        color: lighten($color-primary-500, 10%);
-      }
+  &__music .deca-progress {
+    margin-bottom: 0;
+  }
+
+  &__music .deca-progress .deca-progress__desc{
+    font-weight: $deca-font-weight-medium;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 7px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social &__social-link {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: $color-primary;
+    text-decoration: none;
+    margin-left: 10px;
+
+    &:hover, &:focus {
+      outline: none;
+      color: lighten($color-primary, 10%);
     }
+  }
+
+  &__social &__social-link &__social-icon {
+    font-size: 24px;
   }
 
   //image sizes
-  &--big-image{
+  &--big-image {
     padding: 10px 16px;
-    img{
-      height: 50px;
-      width: 50px;
-      border-radius: 25px;
-    }
   }
 
-  &--medium-image{
+  &--big-image &__user-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+  }
+
+  &--medium-image {
     padding: 14px 16px;
-    img{
-      height: 40px;
-      width: 40px;
-      border-radius: 20px;
-    }
   }
 
-  &--small-image{
+  &--medium-image &__user-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+  }
+
+  &--small-image {
     padding: 15px 16px;
-    img{
-      height: 30px;
-      width: 30px;
-      border-radius: 15px;
-    }
+  }
+
+  &--small-image &__user-image {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
   }
 }

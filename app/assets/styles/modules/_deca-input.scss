@@ -1,4 +1,4 @@
-.deca-form-input{
+.deca-form-input {
   width: 100%;
   padding: 12px 20px;
   border-radius: 12px;
@@ -9,8 +9,8 @@
   transition: all .15s ease-in-out;
   background-color: $color-main-white;
 
-  &:focus{
+  &:focus {
     outline: none;
-    border-color: $color-primary-500;
+    border-color: $color-primary;
   }
 }

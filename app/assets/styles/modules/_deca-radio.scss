@@ -40,7 +40,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: $color-primary-500;
+    background-color: $color-primary;
     opacity: 0;
     transition: all 0.15s ease-in-out;
   }
@@ -50,7 +50,7 @@
   }
 
   &__input:checked ~ &__button{
-    border-color:$color-primary-500;
+    border-color:$color-primary;
   }
 
   &__input:disabled ~ &__label &__button{

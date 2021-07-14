@@ -34,7 +34,7 @@
   }
 
   &__input:checked + &__slider {
-    background-color: $color-primary-500;
+    background-color: $color-primary;
   }
 
   &__input:not(:checked):hover + &__slider {

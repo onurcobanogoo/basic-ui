@@ -1,77 +1,86 @@
-.deca-btn{
+.deca-btn {
   font-family: $primary-font;
   display: inline-flex;
   align-items: center;
   font-weight: $deca-font-weight-medium;
   border: none;
   border-radius: 12px;
-  cursor:pointer;
+  cursor: pointer;
   transition: all .15s ease-in-out;
 
   //Button sizes
-  &--big{
+  &--big {
     padding: 19px 20px;
     font-size: 18px;
     line-height: 22px;
-    i{
-      font-size: 22px;
-    }
   }
 
-  &--medium{
+  &--big &__icon {
+    font-size: 22px;
+  }
+
+  &--medium {
     padding: 16px 18px;
     font-size: 16px;
     line-height: 18px;
-    i{
-      font-size: 20px;
-    }
   }
 
-  &--small{
+  &--medium &__icon {
+    font-size: 20px;
+  }
+
+  &--small {
     padding: 12px 14px;
     font-size: 14px;
     line-height: 16px;
-    i{
-      font-size: 16px;
-    }
+  }
+
+  &--small &__icon {
+    font-size: 16px;
   }
 
   //Button types
-  &--icon-right{
-    i{
-      margin-left: 8px;
-    }
+  &--icon-right {
   }
 
-  &--icon-left{
-    i{
-      margin-right: 8px;
-    }
+  &--icon-right &__icon {
+    margin-left: 8px;
   }
 
-  &--text{}
+  &--icon-left {
+  }
 
-  &--icon{}
+  &--icon-left &__icon {
+    margin-right: 8px;
+  }
 
-  &--basic{
+  &--text {
+  }
+
+  &--icon {
+  }
+
+  &--basic {
     background-color: transparent;
     color: $color-main-text-gray;
-    i{
-      font-size: 24px;
-    }
-    &:hover, &:focus{
+
+    &:hover, &:focus {
       color: darken($color-main-text-gray, 10%);
     }
   }
 
+  &--basic i {
+    font-size: 24px;
+  }
+
+
   //Button Colors
-  $button-colors: (primary: $color-primary-500, success: $color-success-500, info:$color-info-500, warning:$color-warning-500, danger:$color-danger-500 );
+  $button-colors: (primary: $color-primary, success: $color-success, info: $color-info, warning: $color-warning, danger: $color-danger);
 
   @function set-color($color) {
     @if (lightness($color) > 60) {
       @return $color-main-text;
-    }
-    @else {
+    } @else {
       @return $color-main-white;
     }
   }
@@ -79,14 +88,15 @@
   @each $name, $color in $button-colors {
     &--#{$name} {
       background-color: $color;
-      color:set-color($color);
-      &:hover, &:focus{
+      color: set-color($color);
+
+      &:hover, &:focus {
         background-color: lighten($color, 10%);
       }
     }
   }
 
-  &:disabled{
+  &:disabled {
     background-color: #ececec;
     color: $color-main-text;
   }

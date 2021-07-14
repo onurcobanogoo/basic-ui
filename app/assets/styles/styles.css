@@ -6750,7 +6750,7 @@ body {
   font-size: 18px;
   line-height: 22px;
 }
-.deca-btn--big i {
+.deca-btn--big .deca-btn__icon {
   font-size: 22px;
 }
 .deca-btn--medium {
@@ -6758,7 +6758,7 @@ body {
   font-size: 16px;
   line-height: 18px;
 }
-.deca-btn--medium i {
+.deca-btn--medium .deca-btn__icon {
   font-size: 20px;
 }
 .deca-btn--small {
@@ -6766,24 +6766,24 @@ body {
   font-size: 14px;
   line-height: 16px;
 }
-.deca-btn--small i {
+.deca-btn--small .deca-btn__icon {
   font-size: 16px;
 }
-.deca-btn--icon-right i {
+.deca-btn--icon-right .deca-btn__icon {
   margin-left: 8px;
 }
-.deca-btn--icon-left i {
+.deca-btn--icon-left .deca-btn__icon {
   margin-right: 8px;
 }
 .deca-btn--basic {
   background-color: transparent;
   color: #96999C;
 }
-.deca-btn--basic i {
-  font-size: 24px;
-}
 .deca-btn--basic:hover, .deca-btn--basic:focus {
   color: #7c8083;
+}
+.deca-btn--basic i {
+  font-size: 24px;
 }
 .deca-btn--primary {
   background-color: #1F41F7;
@@ -7276,18 +7276,17 @@ body {
   display: flex;
   align-items: center;
 }
-.deca-notification-card__left i, .deca-notification-card__right i {
+.deca-notification-card__left .deca-notification-card__left-icon {
+  margin-right: 10px;
   font-size: 24px;
 }
-.deca-notification-card__left i {
-  margin-right: 10px;
+.deca-notification-card__right .deca-notification-card__right-icon {
+  margin-left: 2px;
+  font-size: 24px;
 }
-.deca-notification-card__right span {
+.deca-notification-card__right .deca-notification-card__right-icon-text {
   font-size: 14px;
   line-height: 21px;
-}
-.deca-notification-card__right i {
-  margin-left: 2px;
 }
 
 .deca-location-input {
@@ -7330,7 +7329,7 @@ body {
   background-color: transparent;
   border: none;
 }
-.deca-create-group-card__button i {
+.deca-create-group-card__button .deca-create-group-card__icon {
   font-size: 24px;
   color: #96999C;
 }
@@ -7349,7 +7348,7 @@ body {
   display: flex;
   align-items: center;
 }
-.deca-user-action-card__info img {
+.deca-user-action-card__info .deca-user-action-card__user-image {
   margin-right: 12px;
 }
 .deca-user-action-card__title {
@@ -7365,63 +7364,46 @@ body {
 .deca-user-action-card__music {
   display: flex;
   flex-direction: column;
-  /* webkit */
 }
-.deca-user-action-card__music span {
-  display: inline-block;
+.deca-user-action-card__music progress::-moz-progress-bar {
+  background: #5672FA;
+}
+.deca-user-action-card__music progress::-webkit-progress-value {
+  background: #5672FA;
+}
+.deca-user-action-card__music .deca-progress {
+  margin-bottom: 0;
+}
+.deca-user-action-card__music .deca-progress .deca-progress__desc {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 7px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  /* number of lines to show */
-  -webkit-box-orient: vertical;
 }
-.deca-user-action-card__music progress {
-  display: inline-block;
-  border: 0 none;
-  background: #F4F6F6;
-  border-radius: 2px;
-  width: 100%;
+.deca-user-action-card__social {
+  display: flex;
+  align-items: center;
 }
-.deca-user-action-card__music progress::-moz-progress-bar {
-  border-radius: 12px;
-  background: #5672FA;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .deca-user-action-card__music progress {
-    height: 4px;
-  }
-}
-.deca-user-action-card__music progress::-webkit-progress-bar {
-  background: transparent;
-}
-.deca-user-action-card__music progress::-webkit-progress-value {
-  border-radius: 2px;
-  background: #5672FA;
-}
-.deca-user-action-card__social a {
-  display: inline-block;
+.deca-user-action-card__social .deca-user-action-card__social-link {
+  display: inline-flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   color: #1F41F7;
   text-decoration: none;
   margin-left: 10px;
 }
-.deca-user-action-card__social a i {
-  font-size: 24px;
-}
-.deca-user-action-card__social a:hover, .deca-user-action-card__social a:focus {
+.deca-user-action-card__social .deca-user-action-card__social-link:hover, .deca-user-action-card__social .deca-user-action-card__social-link:focus {
   outline: none;
   color: #506bf9;
+}
+.deca-user-action-card__social .deca-user-action-card__social-link .deca-user-action-card__social-icon {
+  font-size: 24px;
 }
 .deca-user-action-card--big-image {
   padding: 10px 16px;
 }
-.deca-user-action-card--big-image img {
+.deca-user-action-card--big-image .deca-user-action-card__user-image {
   height: 50px;
   width: 50px;
   border-radius: 25px;
@@ -7429,7 +7411,7 @@ body {
 .deca-user-action-card--medium-image {
   padding: 14px 16px;
 }
-.deca-user-action-card--medium-image img {
+.deca-user-action-card--medium-image .deca-user-action-card__user-image {
   height: 40px;
   width: 40px;
   border-radius: 20px;
@@ -7437,7 +7419,7 @@ body {
 .deca-user-action-card--small-image {
   padding: 15px 16px;
 }
-.deca-user-action-card--small-image img {
+.deca-user-action-card--small-image .deca-user-action-card__user-image {
   height: 30px;
   width: 30px;
   border-radius: 15px;
@@ -7458,6 +7440,12 @@ body {
 .deca-progress__desc {
   font-size: 14px;
   line-height: 21px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 .deca-progress__icon {
   color: #1F41F7;

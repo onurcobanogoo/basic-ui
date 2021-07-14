@@ -14,10 +14,15 @@
   &__desc{
     font-size: 14px;
     line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
 
   &__icon{
-    color: $color-primary-500;
+    color: $color-primary;
     font-size: 16px;
   }
 
@@ -35,7 +40,7 @@
     width: 100%;
 
     &::-moz-progress-bar {
-      background: $color-primary-500;
+      background: $color-primary;
     }
 
     @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -48,7 +53,7 @@
 
     &::-webkit-progress-value {
       border-radius: 2px;
-      background: $color-primary-500;
+      background: $color-primary;
     }
   }
 

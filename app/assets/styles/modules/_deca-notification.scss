@@ -1,4 +1,4 @@
-.deca-notification{
+.deca-notification {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -6,18 +6,21 @@
   padding: 18px 24px;
   border-radius: 12px;
   margin-bottom: 16px;
-  &__title{
+
+  &__title {
     font-weight: $deca-font-weight-medium;
     font-size: 20px;
     line-height: 26px;
   }
-  &__description{
+
+  &__description {
     font-weight: $deca-font-weight-normal;
     font-size: 16px;
     line-height: 26px;
     margin-top: 4px;
   }
-  &__close{
+
+  &__close {
     position: absolute;
     right: 20px;
     top: 18px;
@@ -26,7 +29,7 @@
   }
 
   //Notification types: name, bg-color and font-color
-  $form-types: ("success" $color-success-100 $color-success-500, "info" $color-info-100 $color-info-500, "warning" $color-warning-100 $color-warning-500, "danger" $color-danger-100 $color-danger-500 );
+  $form-types: ("success" $color-success-100 $color-success, "info" $color-info-100 $color-info, "warning" $color-warning-100 $color-warning, "danger" $color-danger-100 $color-danger);
 
   @each $name, $bg, $color in $form-types {
     &--#{$name} {
@@ -35,13 +38,14 @@
     }
   }
 
-  &--has-icon{
+  &--has-icon {
     padding-left: 62px;
-    .deca-notification__icon{
-      position: absolute;
-      left: 30px;
-      top: 18px;
-      font-size: 24px;
-    }
+  }
+
+  &--has-icon .deca-notification__icon {
+    position: absolute;
+    left: 30px;
+    top: 18px;
+    font-size: 24px;
   }
 }
