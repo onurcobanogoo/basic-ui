@@ -57,7 +57,7 @@
     margin-bottom: 35px;
   }
 
-  &__subject{
+  &__subject {
     color: $color-primary;
     font-weight: 600;
     font-size: 14px;
@@ -67,7 +67,7 @@
     text-transform: uppercase;
   }
 
-  &__big-title{
+  &__big-title {
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
@@ -218,5 +218,105 @@
   &--w-desc &__text-block {
     padding-top: 30px;
     padding-bottom: 10px;
+  }
+}
+
+.vertical-card-shop {
+
+  &__main-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  &__text-block {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__product-name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -0.784615px;
+  }
+
+  //rating block
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  &__rating-star {
+    color: $color-warning;
+    padding: 0 4px;
+    font-size: 24px;
+  }
+
+  //buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 40px 24px;
+  }
+
+  &__buttons .deca-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__buttons .deca-btn:first-of-type {
+    margin-bottom: 16px;
+  }
+
+
+  //with background image
+  &--only-image {
+    border: none;
+  }
+
+  &--only-image &__bg-image {
+    width: 100%;
+    height: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  &--only-image &__absolute-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &--only-image &__absolute-content &__absolute-text {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.784615px;
+
+  }
+
+  &--only-image &__absolute-content .deca-btn {
+    margin-top: auto;
+  }
+
+  //with text and buttons
+  &--w-text &__text-block {
+    padding-bottom: 0;
   }
 }
