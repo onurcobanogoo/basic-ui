@@ -7587,11 +7587,12 @@ body {
   position: relative;
   border-radius: 12px;
   margin-bottom: 16px;
+  background: #FFFFFF;
+  box-sizing: border-box;
 }
 
 .vertical-card-blog {
   border: 2px solid #EAEDEE;
-  box-sizing: border-box;
 }
 .vertical-card-blog__main-image {
   width: 100%;
@@ -7723,6 +7724,7 @@ body {
 }
 .vertical-card-blog--only-image {
   border: none;
+  background-color: transparent;
 }
 .vertical-card-blog--only-image .vertical-card-blog__bg-image {
   width: 100%;
@@ -7847,6 +7849,79 @@ body {
 }
 .vertical-card-shop--w-text .vertical-card-shop__text-block {
   padding-bottom: 0;
+}
+
+.deca-pricing-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 2px solid #EAEDEE;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 16px;
+}
+.deca-pricing-card__price {
+  color: #1F41F7;
+  margin-bottom: 16px;
+}
+.deca-pricing-card__price .deca-pricing-card__price-currency {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.653846px;
+  vertical-align: top;
+}
+.deca-pricing-card__price .deca-pricing-card__price-text {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: -1.37308px;
+}
+.deca-pricing-card__price .deca-pricing-card__price-period {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.392308px;
+}
+.deca-pricing-card__text-block {
+  display: flex;
+  flex-direction: column;
+}
+.deca-pricing-card__text-block .deca-pricing-card__title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: -1.04615px;
+  margin-bottom: 6px;
+}
+.deca-pricing-card__text-block .deca-pricing-card__description {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.457692px;
+  color: #96999C;
+}
+.deca-pricing-card__benefits-list {
+  margin: 40px 0;
+}
+.deca-pricing-card__benefit-item {
+  position: relative;
+  font-weight: 500;
+  padding: 10px 0 10px 28px;
+}
+.deca-pricing-card__benefit-item:before {
+  font-family: "icomoon";
+  content: "";
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 100;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  color: #D2DCFE;
+}
+.deca-pricing-card__benefit-item.active:before {
+  color: #1F41F7;
 }
 
 .style-guide__header {

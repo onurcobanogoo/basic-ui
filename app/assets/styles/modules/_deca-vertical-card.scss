@@ -2,12 +2,13 @@
   position: relative;
   border-radius: 12px;
   margin-bottom: 16px;
+  background: $color-main-white;
+  box-sizing: border-box;
 }
 
 //blog type vertical cards
 .vertical-card-blog {
   border: 2px solid $color-main-border;
-  box-sizing: border-box;
 
   //basic blog card type
   &__main-image {
@@ -164,6 +165,7 @@
   //with background image
   &--only-image {
     border: none;
+    background-color: transparent;
   }
 
   &--only-image &__bg-image {
