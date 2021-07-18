@@ -1,49 +1,52 @@
 // Bootstrap
-@import "node_modules/bootstrap/scss/functions";
+@import 'node_modules/bootstrap/scss/functions';
 // custom variables
-@import "custom/bootstrap/variables";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/root";
-@import "node_modules/bootstrap/scss/reboot";
-@import "node_modules/bootstrap/scss/type";
-@import "node_modules/bootstrap/scss/images";
-@import "node_modules/bootstrap/scss/grid";
-@import "node_modules/bootstrap/scss/utilities";
+@import 'custom/bootstrap/variables';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/root';
+@import 'node_modules/bootstrap/scss/reboot';
+@import 'node_modules/bootstrap/scss/type';
+@import 'node_modules/bootstrap/scss/images';
+@import 'node_modules/bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/utilities';
 //For bootstrap-select plugin
-@import "node_modules/bootstrap/scss/buttons";
-@import "node_modules/bootstrap/scss/dropdown";
-@import "node_modules/bootstrap/scss/button-group";
+@import 'node_modules/bootstrap/scss/buttons';
+@import 'node_modules/bootstrap/scss/dropdown';
+@import 'node_modules/bootstrap/scss/button-group';
+//For Popups
+@import 'node_modules/bootstrap/scss/modal';
 
 //Bootstrap-select
-@import "node_modules/bootstrap-select/sass/variables";
-@import "node_modules/bootstrap-select/sass/bootstrap-select";
+@import 'node_modules/bootstrap-select/sass/variables';
+@import 'node_modules/bootstrap-select/sass/bootstrap-select';
 
 // Base
-@import "base/variables";
-@import "base/reset";
-@import "base/font";
-@import "base/global";
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/font';
+@import 'base/global';
 
 // Modules
-@import "modules/deca-btn";
-@import "modules/deca-radio";
-@import "modules/deca-toggle";
-@import "modules/deca-checkbox";
-@import "modules/deca-input";
-@import "modules/deca-form-group";
-@import "modules/deca-dropdown";
-@import "modules/deca-notification";
-@import "modules/deca-notification-card";
-@import "modules/deca-location-input";
-@import "modules/deca-create-group-card";
-@import "modules/deca-user-action-card";
-@import "modules/deca-progress";
-@import "modules/deca-vertical-card";
-@import "modules/deca-pricing-card";
+@import 'modules/deca-btn';
+@import 'modules/deca-radio';
+@import 'modules/deca-toggle';
+@import 'modules/deca-checkbox';
+@import 'modules/deca-input';
+@import 'modules/deca-form-group';
+@import 'modules/deca-dropdown';
+@import 'modules/deca-notification';
+@import 'modules/deca-notification-card';
+@import 'modules/deca-location-input';
+@import 'modules/deca-create-group-card';
+@import 'modules/deca-user-action-card';
+@import 'modules/deca-progress';
+@import 'modules/deca-vertical-card';
+@import 'modules/deca-pricing-card';
+@import 'modules/deca-modal';
 
 //Pages
-@import "pages/style-guide";
+@import 'pages/style-guide';
 
 //Custom
-@import "custom/library/icomoon";
+@import 'custom/library/icomoon';

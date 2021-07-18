@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <title>Popups - Style Guide</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="style-guide">
+        <div class="style-guide__header">
+          <h2>Popups</h2>
+        </div>
+        <div class="style-guide__content">
+          <div class="style-guide__section">
+            <h5 class="style-guide__section-title">Popup Types</h5>
+            <div class="row">
+              <div class="col-md-3">
+                <!-- Deca Modal Basic -->
+
+                <!-- Button trigger modal basic -->
+                <button type="button" class="deca-btn deca-btn--medium deca-btn--primary" data-toggle="modal"
+                  data-target="#modalBasic">
+                  Basic Two Buttons
+                </button>
+
+                <!-- Modal Basic -->
+                <div class="deca-modal modal fade" id="modalBasic" tabindex="-1" role="dialog"
+                  aria-labelledby="modalBasicLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="deca-modal__modal-content modal-content">
+                      <div class="deca-modal__modal-header modal-header">
+                        <h5 class="deca-modal__modal-title modal-title" id="modalBasicLabel">Header</h5>
+                        <button type="button" class="deca-btn--basic deca-modal__modal-close" data-dismiss="modal"
+                          aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="deca-modal__modal-body modal-body">
+                        <p class="deca-modal__modal-text">
+                          Here is text about some useful information that you need.</p>
+                      </div>
+                      <div class="deca-modal__modal-footer modal-footer">
+                        <button type="button" class="deca-btn deca-btn--medium deca-btn--primary">Accept</button>
+                        <button type="button" class="deca-btn deca-btn--medium deca-btn--outline-primary"
+                          data-dismiss="modal">Decline</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end Deca Modal Basic -->
+              </div>
+
+              <div class="col-md-3">
+                <!-- Deca Modal with image -->
+
+                <!-- Button trigger modal with image -->
+                <button type="button" class="deca-btn deca-btn--medium deca-btn--primary" data-toggle="modal"
+                  data-target="#imageModal">
+                  Modal with image
+                </button>
+
+                <!-- Modal with image -->
+                <div class="deca-modal modal fade " id="imageModal" tabindex="-1" role="dialog"
+                  aria-labelledby="imageModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="deca-modal__modal-content modal-content">
+                      <div class="deca-modal__modal-header modal-header">
+                        <h5 class="deca-modal__modal-title modal-title" id="imageModalLabel"></h5>
+                        <button type="button" class="deca-btn--basic deca-modal__modal-close" data-dismiss="modal"
+                          aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="deca-modal__modal-body modal-body">
+                        <img class="deca-modal__modal-image" src="./assets/images/popup-text.png" alt="Warning">
+                        <p class="deca-modal__modal-text">
+                          Here is a text about mistake that you did, please check and fix it.</p>
+                      </div>
+                      <div class="deca-modal__modal-footer modal-footer">
+                        <button type="button" class="deca-btn deca-btn--medium deca-btn--primary">Fix It</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end Deca Modal with image -->
+              </div>
+
+              <div class="col-md-3">
+                <!-- Deca Modal with footer image -->
+
+                <!-- Button trigger modal with footer image -->
+                <button type="button" class="deca-btn deca-btn--medium deca-btn--primary" data-toggle="modal"
+                  data-target="#imageFooterModal">
+                  Modal with footer image
+                </button>
+
+                <!-- Modal with footer image -->
+                <div class="deca-modal deca-modal--w-footer-image modal fade " id="imageFooterModal" tabindex="-1"
+                  role="dialog" aria-labelledby="imageFooterModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="deca-modal__modal-content modal-content">
+                      <div class="deca-modal__modal-header modal-header">
+                        <h5 class="deca-modal__modal-title modal-title" id="imageFooterModallLabel">Header</h5>
+                        <button type="button" class="deca-btn--basic deca-modal__modal-close" data-dismiss="modal"
+                          aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="deca-modal__modal-body modal-body">
+
+                        <p class="deca-modal__modal-text">
+                          Here is text about some useful information that you need.
+                      </div>
+                      <div class="deca-modal__modal-footer modal-footer">
+                        <img class="deca-modal__footer-image" src="./assets/images/popup-image.png" alt="popup image">
+                        <div class="deca-modal__modal-footer-buttons">
+                          <button type="button" class="deca-btn deca-btn--medium deca-btn--primary">Accept</button>
+                          <button type="button" class="deca-btn deca-btn--medium deca-btn--outline-primary"
+                            data-dismiss="modal">Decline</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end Deca Modal with footer image -->
+              </div>
+
+              <div class="col-md-3">
+                <!-- Deca Modal with Footer Input -->
+
+                <!-- Button trigger modal with Footer Input -->
+                <button type="button" class="deca-btn deca-btn--medium deca-btn--primary" data-toggle="modal"
+                  data-target="#modalFooterInput">
+                  Modal Footer Input
+                </button>
+
+                <!-- Modal with Footer Input -->
+                <div class="deca-modal modal fade" id="modalFooterInput" tabindex="-1" role="dialog"
+                  aria-labelledby="modalFooterInputLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="deca-modal__modal-content modal-content">
+                      <div class="deca-modal__modal-header modal-header">
+                        <h5 class="deca-modal__modal-title modal-title" id="modalFooterInputLabel">Subscription popup
+                          for new
+                          members</h5>
+                      </div>
+                      <div class="deca-modal__modal-body modal-body">
+                        <p class="deca-modal__modal-text">
+                          Here is text about some useful information that you need.</p>
+                      </div>
+                      <div class="deca-modal__modal-footer modal-footer">
+                        <div class="deca-form-group">
+                          <input type="text" class="deca-form-input" placeholder="Enter your email here" required>
+                        </div>
+                        <button type="button" class="deca-btn deca-btn--medium deca-btn--primary">Accept</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end Deca Modal with Footer Input -->
+              </div>
+
+              <div class="col-md-3 mt-3">
+                <!-- Deca Modal shop -->
+
+                <!-- Button trigger modal with Footer Input -->
+                <button type="button" class="deca-btn deca-btn--medium deca-btn--primary" data-toggle="modal"
+                  data-target="#modalShop">
+                  Modal Shop
+                </button>
+
+                <!-- Modal with Footer Input -->
+                <div class="deca-modal deca-modal--shop modal fade" id="modalShop" tabindex="-1" role="dialog"
+                  aria-labelledby="modalShopLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="deca-modal__modal-content modal-content">
+                      <a class="deca-modal__go-cart" href="#"><i class="icon-Shopping-cart"></i></a>
+                      <img class="deca-modal__bg-image" src="./assets/images/shop-popup.png" alt="Wireless headphones">
+                      <div class="deca-modal__shop-content">
+                        <h5 class="deca-modal__shop-title">Wireless to the fullest</h5>
+                        <div class="deca-modal__shop-buttons">
+                          <button class="deca-btn deca-btn--medium deca-btn--primary">$199 Shop Now</button>
+                          <button
+                            class="deca-btn deca-btn--medium deca-btn--icon-right deca-btn--outline-primary">Wishlist <i
+                              class="deca-btn__icon icon-Star"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end Deca Modal with Footer Input -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    </script>
+  </body>
+
+</html>

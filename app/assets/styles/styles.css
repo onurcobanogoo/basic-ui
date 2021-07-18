@@ -6303,6 +6303,203 @@ input[type=button].btn-block {
   pointer-events: none;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+  }
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.modal.modal-static .modal-dialog {
+  transform: scale(1.02);
+}
+
+.modal-dialog-scrollable {
+  display: flex;
+  max-height: calc(100% - 1rem);
+}
+.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 1rem);
+  overflow: hidden;
+}
+.modal-dialog-scrollable .modal-header,
+.modal-dialog-scrollable .modal-footer {
+  flex-shrink: 0;
+}
+.modal-dialog-scrollable .modal-body {
+  overflow-y: auto;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+}
+.modal-dialog-centered::before {
+  display: block;
+  height: calc(100vh - 1rem);
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  content: "";
+}
+.modal-dialog-centered.modal-dialog-scrollable {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {
+  max-height: none;
+}
+.modal-dialog-centered.modal-dialog-scrollable::before {
+  content: none;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+.modal-header .close {
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-footer > * {
+  margin: 0.25rem;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+
+  .modal-dialog-scrollable {
+    max-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-scrollable .modal-content {
+    max-height: calc(100vh - 3.5rem);
+  }
+
+  .modal-dialog-centered {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal-dialog-centered::before {
+    height: calc(100vh - 3.5rem);
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg,
+.modal-xl {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-xl {
+    max-width: 1140px;
+  }
+}
 @-webkit-keyframes bs-notify-fadeOut {
   0% {
     opacity: 0.9;
@@ -6311,7 +6508,6 @@ input[type=button].btn-block {
     opacity: 0;
   }
 }
-
 @keyframes bs-notify-fadeOut {
   0% {
     opacity: 0.9;
@@ -7922,6 +8118,115 @@ body {
 }
 .deca-pricing-card__benefit-item.active:before {
   color: #1F41F7;
+}
+
+.deca-modal__modal-content {
+  padding: 35px 40px;
+  border: 2px solid #EAEDEE;
+  border-radius: 12px;
+}
+.deca-modal__modal-header {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.deca-modal__modal-header .deca-modal__modal-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.784615px;
+}
+.deca-modal__modal-header .deca-modal__modal-close {
+  font-size: 24px;
+  color: #10182B;
+}
+.deca-modal__modal-body {
+  padding: 0;
+}
+.deca-modal__modal-body .deca-modal__modal-text {
+  color: #96999C;
+  letter-spacing: -0.523077px;
+}
+.deca-modal__modal-body .deca-modal__modal-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.deca-modal__modal-footer {
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  margin-top: 42px;
+}
+.deca-modal__modal-footer .deca-btn {
+  width: 100%;
+}
+.deca-modal__modal-footer .deca-form-group {
+  width: 100%;
+}
+.deca-modal--w-footer-image .deca-modal__modal-footer {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.deca-modal--w-footer-image .deca-modal__footer-image {
+  width: 100%;
+  border-radius: 12px;
+}
+.deca-modal--w-footer-image .deca-modal__modal-footer .deca-btn {
+  margin: 8px 0;
+}
+.deca-modal--shop .deca-modal__modal-content {
+  padding: 0;
+  border: none;
+}
+.deca-modal--shop .deca-modal__go-cart {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  text-decoration: none;
+  color: #1F41F7;
+}
+.deca-modal--shop .deca-modal__go-cart i,
+.deca-modal--shop .deca-modal__go-cart span {
+  font-size: 24px;
+}
+.deca-modal--shop .deca-modal__bg-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.deca-modal--shop .deca-modal__shop-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 50px;
+  width: 100%;
+}
+.deca-modal--shop .deca-modal__shop-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.784615px;
+  text-align: center;
+}
+.deca-modal--shop .deca-modal__shop-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+.deca-modal--shop .deca-modal__shop-buttons .deca-btn {
+  width: 100%;
+  margin: 0 5px;
+}
+.deca-modal--shop .deca-modal__shop-buttons .deca-btn:first-of-type {
+  margin-left: 0;
+}
+.deca-modal--shop .deca-modal__shop-buttons .deca-btn:last-of-type {
+  margin-right: 0;
 }
 
 .style-guide__header {
