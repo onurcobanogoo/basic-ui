@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <title>Charts - Style Guide</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="style-guide">
+        <div class="style-guide__header">
+          <h2>Charts</h2>
+        </div>
+        <div class="style-guide__content">
+          <div class="style-guide__section">
+            <h5 class="style-guide__section-title">Chart Types</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <!-- Deca Line Chart -->
+
+                <div id="lineChart"></div>
+
+                <!-- end Deca Line Chart-->
+              </div>
+              <div class="col-md-6">
+                <!-- Deca Area Chart -->
+
+                <div id="areaChart"></div>
+
+                <!-- end Deca Area Chart-->
+              </div>
+              <div class="col-md-6">
+                <!-- Deca Column Chart -->
+
+                <div id="columnChart"></div>
+
+                <!-- end Deca Column Chart-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../node_modules/apexcharts/dist/apexcharts.js"></script>
+
+    <script>
+      //Line chart options
+      var lineOptions = {
+        series: [{
+          name: "Data",
+          data: [300, 450, 500, 328, 550, 500, 354]
+        }],
+        chart: {
+          height: 350,
+          type: 'line',
+          fontFamily: 'Inter, sans-serif',
+          zoom: {
+            enabled: false
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          curve: 'straight',
+          lineCap: 'butt',
+          colors: "#FB3030",
+          width: 2,
+          dashArray: 0,
+        },
+        tooltip: {
+          enabled: false,
+        },
+        title: {
+          text: "All Views",
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '20px',
+            fontWeight: 'normal',
+            fontFamily: 'Inter, sans-serif',
+            color: '#10182B'
+          },
+        },
+        yaxis: {
+          show: true,
+          showAlways: true,
+          showForNullSeries: true,
+          seriesName: undefined,
+          opposite: false,
+          reversed: false,
+          logarithmic: false,
+          tickAmount: 6,
+          min: 0,
+          max: 600,
+          labels: {
+            show: true,
+            align: 'right',
+            minWidth: 0,
+            maxWidth: 200,
+            style: {
+              colors: "#96999C",
+              fontSize: '12px',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+            },
+            offsetX: 0,
+            offsetY: 0,
+            rotate: 0,
+          },
+          axisBorder: {
+            show: false, //düz olan border çizgisi
+          },
+          axisTicks: {
+            show: false //border üzerinde yer alan dikey çizgiler
+          },
+          title: {
+            text: undefined, //xaxis title
+          },
+          tooltip: {
+            enabled: false, //xaxis tooltip
+          },
+        },
+        xaxis: {
+          type: 'category',
+          categories: [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          tickAmount: undefined, // çok fazla data dahi olsa ne kadar ara ile yazılacağına dair data
+          tickPlacement: 'start', //nereden başlayacağını gösteriyor
+          min: undefined,
+          max: undefined,
+          range: undefined,
+          floating: false,
+          decimalsInFloat: undefined,
+          overwriteCategories: undefined,
+          position: 'bottom',
+          labels: {
+            show: true,
+            rotate: 0,
+            rotateAlways: false,
+            hideOverlappingLabels: true,
+            showDuplicates: false,
+            trim: false,
+            minHeight: undefined,
+            maxHeight: 120,
+            style: {
+              colors: "#96999C",
+              fontSize: '12px',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+              cssClass: 'apexcharts-xaxis-label',
+            },
+            offsetX: 0,
+            offsetY: 0,
+            format: undefined,
+            formatter: undefined,
+            datetimeUTC: true,
+            datetimeFormatter: {
+              year: 'yyyy',
+              month: "MMM 'yy",
+              day: 'dd MMM',
+              hour: 'HH:mm',
+            },
+          },
+          axisBorder: {
+            show: false, //düz olan border çizgisi
+          },
+          axisTicks: {
+            show: false //border üzerinde yer alan dikey çizgiler
+          },
+          title: {
+            text: undefined, //xaxis title
+          },
+          tooltip: {
+            enabled: false, //xaxis tooltip
+          },
+        }
+      };
+
+      new ApexCharts(document.querySelector("#lineChart"), lineOptions).render();
+
+      //end Line chart options
+
+
+      //Area chart options
+      var areaOptions = {
+        series: [{
+          name: 'series1',
+          data: [300, 350, 300, 328, 150, 200, 354]
+        }, {
+          name: 'series2',
+          data: [200, 400, 100, 228, 450, 500, 254]
+        }],
+        chart: {
+          type: 'area',
+          height: 350,
+          zoom: {
+            enabled: false
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth',
+          width: 0,
+        },
+        fill: {
+          type: 'solid',
+        },
+        colors: ['#4CECF4', '#F72B64'],
+        tooltip: {
+          enabled: false,
+        },
+        title: {
+          text: "All Views",
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '20px',
+            fontWeight: 'normal',
+            fontFamily: 'Inter, sans-serif',
+            color: '#10182B'
+          },
+        },
+        yaxis: {
+          show: true,
+          showAlways: true,
+          showForNullSeries: true,
+          seriesName: undefined,
+          opposite: false,
+          reversed: false,
+          logarithmic: false,
+          tickAmount: 6,
+          min: 0,
+          max: 600,
+          labels: {
+            show: false,
+            align: 'right',
+            minWidth: 0,
+            maxWidth: 200,
+            style: {
+              colors: "#96999C",
+              fontSize: '12px',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+            },
+            offsetX: 0,
+            offsetY: 0,
+            rotate: 0,
+          },
+          axisBorder: {
+            show: false, //düz olan border çizgisi
+          },
+          axisTicks: {
+            show: false //border üzerinde yer alan dikey çizgiler
+          },
+          title: {
+            text: undefined, //xaxis title
+          },
+          tooltip: {
+            enabled: false, //xaxis tooltip
+          },
+        },
+        xaxis: {
+          type: 'category',
+          categories: [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          tickAmount: undefined, // çok fazla data dahi olsa ne kadar ara ile yazılacağına dair data
+          tickPlacement: 'start', //nereden başlayacağını gösteriyor
+          min: undefined,
+          max: undefined,
+          range: undefined,
+          floating: false,
+          decimalsInFloat: undefined,
+          overwriteCategories: undefined,
+          position: 'bottom',
+          labels: {
+            show: false,
+            rotate: 0,
+            rotateAlways: false,
+            hideOverlappingLabels: true,
+            showDuplicates: false,
+            trim: false,
+            minHeight: undefined,
+            maxHeight: 120,
+            style: {
+              colors: "#96999C",
+              fontSize: '12px',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+              cssClass: 'apexcharts-xaxis-label',
+            },
+            offsetX: 0,
+            offsetY: 0,
+            format: undefined,
+            formatter: undefined,
+            datetimeUTC: true,
+            datetimeFormatter: {
+              year: 'yyyy',
+              month: "MMM 'yy",
+              day: 'dd MMM',
+              hour: 'HH:mm',
+            },
+          },
+          axisBorder: {
+            show: false, //düz olan border çizgisi
+          },
+          axisTicks: {
+            show: false //border üzerinde yer alan dikey çizgiler
+          },
+          title: {
+            text: undefined, //xaxis title
+          },
+          tooltip: {
+            enabled: false, //xaxis tooltip
+          },
+        },
+        legend: {
+          show: true,
+          horizontalAlign: 'right',
+          fontSize: '12px',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: 400,
+        },
+        grid: {
+          show: true,
+          borderColor: '#CFD1D5',
+          xaxis: {
+            lines: {
+              show: true
+            }
+          },
+          yaxis: {
+            lines: {
+              show: false
+            }
+          },
+        }
+      };
+
+      new ApexCharts(document.querySelector("#areaChart"), areaOptions).render();
+
+      //end Area chart options
+
+      //Column chart options
+
+      var columnOptions = {
+        series: [{
+          name: 'series1',
+          data: [300, 350, 300, 328, 150, 200, 354]
+        }, {
+          name: 'series2',
+          data: [200, 400, 100, 228, 450, 500, 254]
+        }],
+        chart: {
+          type: 'bar',
+          height: 375,
+          zoom: {
+            enabled: false
+          },
+
+        },
+        title: {
+          text: "All Views",
+          align: 'left',
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize: '20px',
+            fontWeight: 'normal',
+            fontFamily: 'Inter, sans-serif',
+            color: '#10182B'
+          },
+        },
+        colors: ['#4CECF4', '#F72B64'],
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '65%',
+            endingShape: 'rounded'
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          show: true,
+          width: 10,
+          colors: ['transparent']
+        },
+        yaxis: {
+          show: true,
+          showAlways: true,
+          showForNullSeries: true,
+          seriesName: undefined,
+          opposite: false,
+          reversed: false,
+          logarithmic: false,
+          tickAmount: 6,
+          min: 0,
+          max: 600,
+          labels: {
+            show: true,
+            align: 'right',
+            minWidth: 0,
+            maxWidth: 200,
+            style: {
+              colors: "#96999C",
+              fontSize: '12px',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+            },
+            offsetX: 0,
+            offsetY: 0,
+            rotate: 0,
+          },
+          axisBorder: {
+            show: false, //düz olan border çizgisi
+          },
+          axisTicks: {
+            show: false //border üzerinde yer alan dikey çizgiler
+          },
+          title: {
+            text: undefined, //xaxis title
+          },
+          tooltip: {
+            enabled: false, //xaxis tooltip
+          },
+        },
+        xaxis: {
+          type: 'category',
+          categories: [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+          tickAmount: undefined, // çok fazla data dahi olsa ne kadar ara ile yazılacağına dair data
+          tickPlacement: 'start', //nereden başlayacağını gösteriyor
+          min: undefined,
+          max: undefined,
+          range: undefined,
+          floating: false,
+          decimalsInFloat: undefined,
+          overwriteCategories: undefined,
+          position: 'bottom',
+          labels: {
+            show: true,
+            rotate: 0,
+            rotateAlways: false,
+            hideOverlappingLabels: true,
+            showDuplicates: false,
+            trim: false,
+            minHeight: undefined,
+            maxHeight: 120,
+            style: {
+              colors: "#96999C",
+              fontSize: '12px',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+              cssClass: 'apexcharts-xaxis-label',
+            },
+            offsetX: 0,
+            offsetY: 0,
+            format: undefined,
+            formatter: undefined,
+            datetimeUTC: true,
+            datetimeFormatter: {
+              year: 'yyyy',
+              month: "MMM 'yy",
+              day: 'dd MMM',
+              hour: 'HH:mm',
+            },
+          },
+          axisBorder: {
+            show: false, //düz olan border çizgisi
+          },
+          axisTicks: {
+            show: false //border üzerinde yer alan dikey çizgiler
+          },
+          title: {
+            text: undefined, //xaxis title
+          },
+          tooltip: {
+            enabled: false, //xaxis tooltip
+          },
+        },
+        fill: {
+          opacity: 1
+        },
+        tooltip: {
+          enabled: false,
+        },
+        legend: {
+          show: false,
+        },
+      };
+
+      new ApexCharts(document.querySelector("#columnChart"), columnOptions).render();
+
+    </script>
+  </body>
+
+</html>
